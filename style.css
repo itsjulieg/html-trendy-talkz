@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&display=swap');
+
+:root {
+    --dark-brown:#6E4421;
+    --orange:#F08C00;
+    --beige: #EFC281;
+    --yellow: #FAEEB0;
+}
+
+/* global styles */
+body {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  background: var(--beige);
+}
+
+/* typography */
+h1, h2, h3 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--dark-brown);
+}
+
+p {
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--dark-brown);
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+}
