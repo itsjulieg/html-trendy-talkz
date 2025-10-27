@@ -8,6 +8,10 @@
 }
 
 /* global styles */
+body, html {
+    scroll-behavior: smooth;
+}
+
 body {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
@@ -31,6 +35,8 @@ p {
     font-size: 16px;
     line-height: 25px;
     color: var(--dark-brown);
+    width: 100%;
+    max-width: 634px;
 }
 
 h1 {
@@ -39,4 +45,14 @@ h1 {
 
 h2 {
     font-size: 24px;
+}
+
+/* homepage */
+
+.sr-only{
+    visibility: hidden;
+}
+
+.home #scroll-up{
+    display: none;
 }
