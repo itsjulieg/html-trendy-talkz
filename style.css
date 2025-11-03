@@ -45,12 +45,16 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    color: #572800;
+    color: var(--dark-brown);
     text-align: center;
 }
 
 h2 {
     font-size: 24px;
+}
+
+li {
+    color: var(--dark-brown);
 }
 
 /* homepage */
@@ -81,7 +85,6 @@ footer {
 @media (min-width: 700px) {
 
 h1 {
-color: #572800;
 text-align: center;
 /* heading 1 desktop */
 font-family: "DM Serif Display";
@@ -92,11 +95,11 @@ line-height: normal;
 }
 
 h2 {
-
-}
-
-p {
-
+font-family: "DM Serif Display";
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 }
