@@ -6,7 +6,8 @@
     --beige:#EFC281;
     --yellow:#FAEEB0;
     --white:#FFFFFF;
-    --dark-blue:#0915FF;
+    --sky-blue:#09ADFF;
+    --font-sans: "DM Serif Text", Times New Roman, serif;
 }
 
 /* global styles */
@@ -21,11 +22,6 @@ body {
   background: var(--beige);
 }
 
-img {
-    max-width: 80vw;
-}
-
-/* typography */
 .nav {
     color: var(--white);
     transition: 0.3s color ease;
@@ -33,9 +29,14 @@ img {
 
 .nav a:hover, .nav a:focus {
     text-decoration: none;
-    color: var(--dark-blue);
+    color: var(--sky-blue);
 }
 
+img {
+    max-width: 80vw;
+}
+
+/* typography */
 h1 {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
