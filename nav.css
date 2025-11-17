@@ -1,0 +1,9 @@
+.nav {
+    color: var(--white);
+    transition: 0.3s color ease;
+}
+
+.nav a:hover, .nav a:focus {
+    text-decoration: none;
+    color: var(--sky-blue);
+}
