@@ -78,6 +78,7 @@ h1 {
     color: var(--white);
     text-align: center;
     padding: auto;
+    height: 88px
 }
 
 h2 {
@@ -101,7 +102,7 @@ header img {
 }
 
 .header {
-    background: url(images/fall-leaves.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.44) 0%, rgba(0, 0, 0, 0.44) 100%), url(images/fall-leaves.jpg) lightgray 50% / cover no-repeat;
     height: 236px;
 }
 
