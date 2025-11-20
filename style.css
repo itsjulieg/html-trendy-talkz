@@ -77,11 +77,19 @@ h2 {
     font-size: 24px;
 }
 
-p li {
+li {
     color: var(--dark-brown);
+    width: 100%;
+    max-width: 634px;
 }
 
 /* homepage */
+
+header-one {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.44) 0%, rgba(0, 0, 0, 0.44) 100%), url(/Users/gomesj4/Downloads/pexels-damright-632075.jpg) lightgray 50% / cover no-repeat;
+    height: 236px;
+    align-self: stretch;
+}
 
 .sr-only{
     visibility: hidden;
