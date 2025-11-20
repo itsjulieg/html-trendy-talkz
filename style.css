@@ -23,16 +23,23 @@ body {
 }
 
 nav {
-    background: #6E4421;
     width: 100%;
     height: 10%;
-    color: #FFFFFF;
-    transition: 0.3s color ease;
+    color:#FFFFFF;
+}
+
+nav a {
+    color:#FFFFFF;
+    transition: 0.2s color ease;
 }
 
 nav a:hover, nav a:focus {
     text-decoration: none;
     color: var(--sky-blue);
+}
+
+.nav toggle .icon {
+
 }
 
 img {
@@ -83,15 +90,19 @@ li {
     max-width: 634px;
 }
 
-/* homepage */
-
-header-one {
-    height: 236px;
-    align-self: stretch;
+/* header */
+header img {
+    max-width: 200px;
 }
 
+/* homepage */
 .sr-only{
     visibility: hidden;
+}
+
+.header {
+    background: url(images/fall-leaves.jpg);
+    height: 236px;
 }
 
 .home #scroll-up{
@@ -131,4 +142,5 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+
 }
