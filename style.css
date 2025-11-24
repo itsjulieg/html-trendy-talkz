@@ -1,10 +1,12 @@
+/* load fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&display=swap');
 
+/* variables */
 :root {
     --dark-brown:#6E4421;
     --orange:#F08C00;
     --beige:#EFC281;
-    --yellow:#FAEEB0;
+    --yellow:#FFE7C5;
     --white:#FFFFFF;
     --sky-blue:#09ADFF;
     --font-sans: "DM Serif Text", Times New Roman, serif;
@@ -101,9 +103,15 @@ header img {
     visibility: hidden;
 }
 
-.header {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.44) 0%, rgba(0, 0, 0, 0.44) 100%), url(images/fall-leaves.jpg) lightgray 50% / cover no-repeat;
-    height: 236px;
+.leaves-bg {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.44) 0%, rgba(0, 0, 0, 0.44) 100%), url(images/fall-leaves.jpg);
+    min-height: 236px;
+    background-size: cover;
+    background-position: center
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home #scroll-up{
@@ -143,5 +151,7 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+
+
 
 }
