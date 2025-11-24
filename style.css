@@ -123,7 +123,7 @@ header img {
 }
 
 .box-left {
-    color:#FFFFFF;
+    color: var(--white);
     display: flex;
     width: 100vw;
     height: 704px;
