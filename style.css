@@ -63,13 +63,11 @@ h2, h3 {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--dark-brown);
 }
 
 p {
     font-size: 16px;
     line-height: 25px;
-    color: var(--dark-brown);
     width: 100%;
     max-width: 634px;
 }
@@ -90,10 +88,12 @@ h2 {
     font-size: 24px;
 }
 
-li {
-    color: var(--dark-brown);
-    width: 100%;
-    max-width: 634px;
+ul {
+    width: 444px;
+}
+
+ol {
+    width: 444px;
 }
 
 /* header */
@@ -110,7 +110,7 @@ header img {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.44) 0%, rgba(0, 0, 0, 0.44) 100%), url(images/fall-leaves.jpg);
     min-height: 236px;
     background-size: cover;
-    background-position: center
+    background-position: center;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -133,14 +133,35 @@ header img {
     gap: 27px;
     flex-shrink: 0;
     background: #7D5029;
-
 }
 
 .box-left-content {
     color:#FFFFFF;
     display: flex;
     width: 1265px;
-    justify-content: cneter;
+    justify-content: center;
+    align-items: center;
+    gap: 61px;
+}
+
+.box-right {
+    color: var(--dark-brown);
+    display: flex;
+    width: 100vw;
+    height: 704px;
+    padding: 37px 86px;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px;
+    flex-shrink: 0;
+    background: var(--yellow);
+}
+
+.box-right-content {
+    color: var(--dark-brown);
+    display: flex;
+    width: 1265px;
+    justify-content: center;
     align-items: center;
     gap: 61px;
 }
