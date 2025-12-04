@@ -167,16 +167,6 @@ header img {
     flex-wrap: nowrap;
 }
 
-.box-right-content ul {
-    flex: 1 1 0%;
-    min-width: 0; /* allow flex child to shrink */
-    margin: 0;
-    padding-left: 1.2rem;
-    list-style-position: outside;
-    overflow-wrap: break-word;
-    word-break: break-word; /* wrap long URLs */
-}
-
 .box-right-content img {
     flex: 0 0 auto;
     width: 760px;
