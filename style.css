@@ -159,11 +159,31 @@ header img {
     color: var(--dark-brown);
     display: flex;
     flex-direction: row;
-    width: 100%;
     max-width: 1265px;
     justify-content: center;
     align-items: flex-start;
     gap: 61px;
+    flex-wrap: nowrap;
+}
+
+.box-right-content-sources ul {
+  flex: 1 1 48%;        /* take up roughly half, but can shrink */
+  min-width: 0;        /* REQUIRED in flex layouts so child can shrink */
+  max-width: 520px;    /* adjust to taste */
+  margin: 0;
+  padding-left: 1.2rem;
+  overflow-wrap: anywhere;   /* allow long URLs to break/wrap */
+  word-break: break-word;    /* fallback for some browsers */
+}
+
+.box-right-content-sources {
+    color: var(--dark-brown);
+    display: flex;
+    flex-direction: row;
+    max-width: 1265px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
     flex-wrap: nowrap;
 }
 
@@ -205,6 +225,24 @@ footer {
 
 /* media queries */
 @media (min-width: 700px) {
+
+.leaves-bg {
+background: linear-gradient(0deg, rgba(0,0,0,0.44)), url('images/fall-leaves.jpg') center/cover no-repeat;
+width: 100%;
+height: 118px;
+}
+
+.box-left {
+color: var(--white);
+display: flex;
+width: 100%;
+padding: 37px 86px;
+flex-direction: column;
+align-items: column;
+gap: 27px;
+flex-shrink: 0;
+background: #7D5029;
+}
 
 h1 {
 text-align: center;
