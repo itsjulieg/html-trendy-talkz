@@ -1,90 +1,35 @@
 /**
- * WIREFRAME NAVIGATION - Accessible Hamburger Menu (needs full testing - updates may come)
+ * Accessible Navigation Toggle - Hamburger Menu with Focus Management
  */
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Find navigation toggle button
-  const navToggle = document.querySelector(".nav-toggle");
-  const navList = document.querySelector("nav ul");
+const toggleButton = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav ul');
+const iconSpan = toggleButton.querySelector('.icon');
 
-  if (!navToggle || !navList) {
-    console.warn("Navigation toggle or nav list not found");
-    return;
+// Toggle menu open/close
+toggleButton.addEventListener('click', () => {
+  const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
+  toggleButton.setAttribute('aria-expanded', String(!expanded));
+  navList.classList.toggle('open');
+
+  if (!expanded) {
+    toggleButton.setAttribute('aria-label', 'Close navigation menu');
+    iconSpan.textContent = '✖';
+  } else {
+    toggleButton.setAttribute('aria-label', 'Open navigation menu');
+    iconSpan.textContent = '☰';
   }
+});
 
-  // Set initial ARIA attributes
-  navToggle.setAttribute("aria-expanded", "false");
+// Auto-close when focus leaves nav
+document.addEventListener('focusin', (event) => {
+  if (!navList.classList.contains('open')) return;
 
-  // Ensure nav list has an ID
-  if (!navList.id) {
-    navList.id = "main-nav";
+  const isInsideNav = navList.contains(event.target) || toggleButton.contains(event.target);
+  if (!isInsideNav) {
+    navList.classList.remove('open');
+    toggleButton.setAttribute('aria-expanded', 'false');
+    toggleButton.setAttribute('aria-label', 'Open navigation menu');
+    iconSpan.textContent = '☰';
   }
-  navToggle.setAttribute("aria-controls", navList.id);
-
-  // Toggle function
-  function toggleNav() {
-    const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
-
-    navToggle.setAttribute("aria-expanded", !isExpanded);
-    navList.setAttribute("aria-expanded", !isExpanded);
-
-    if (!isExpanded) {
-      // Opening menu - focus first link
-      const firstLink = navList.querySelector("a");
-      if (firstLink) {
-        setTimeout(() => firstLink.focus(), 100);
-      }
-    }
-  }
-
-  // Close menu function
-  function closeNav() {
-    navToggle.setAttribute("aria-expanded", "false");
-    navList.setAttribute("aria-expanded", "false");
-    navToggle.focus();
-  }
-
-  // Click event
-  navToggle.addEventListener("click", function (e) {
-    e.preventDefault();
-    toggleNav();
-  });
-
-  // Keyboard events
-  navToggle.addEventListener("keydown", function (e) {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      toggleNav();
-    }
-    if (e.key === "Escape") {
-      closeNav();
-    }
-  });
-
-  // Close on outside click (but not on logo)
-  document.addEventListener("click", function (e) {
-    const logo = document.querySelector(".nav-logo");
-    if (
-      !navToggle.contains(e.target) &&
-      !navList.contains(e.target) &&
-      !logo.contains(e.target)
-    ) {
-      closeNav();
-    }
-  });
-
-  // Handle window resize
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 768) {
-      navToggle.setAttribute("aria-expanded", "false");
-      navList.setAttribute("aria-expanded", "false");
-    }
-  });
-
-  // Escape key from anywhere in the nav
-  navList.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      closeNav();
-    }
-  });
 });

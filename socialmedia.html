@@ -1,54 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Social Media: Trendy Talkz</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Fall Fashion: Trendy Talkz</title>
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     
     <body>
-        <header>
-            <nav aria-label="Main navigation">
-            <!-- Top row container for logo and hamburger -->
-
-            <!-- Logo on the left -->
-            <a href="index.html" class="nav-logo" aria-label="Home">
-                <div class="nav-logo-circle"></div>
-                    <img src="images/Logo.png" alt="Home" />
-                </div>
-            </a>
-
-            <div class="flex-right">
-            <!-- Hamburger menu button - only visible on mobile -->
-                <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
-                    <span class="sr-only">Toggle navigation menu</span>
-                </button>
-
-
-             <!-- your HTML pages go in this list-->
-                <ul id="main-nav" aria-expanded="false">
-                    <li>
-                        <a href="fashion.html">
-                            Fall Fashion
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tvshowsmovies.html">
-                           TV Shows and Movies
-                        </a>
-                    </li>
-                    <li>
-                        <a href="socialmedia.html">
-                           Social Media
-                        </a>
-                    </li>
-
-                </ul>
+        <header class="site-header">
+            <div class="logo">
+                <a href="index.html" aria-label="Home">
+                    <img src="images/Logo.png" alt="Trendy Talkz Logo" />
+                </a>
             </div>
-        </nav>
+            <div>
+                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation menu">
+                    <span class="icon" aria-hidden="true">☰</span>
+                </button>
+                <nav class="nav" id="main-nav">
+                    <ul>
+                        <li><a href="fashion.html">Fall Fashion</a></li>
+                        <li><a href="tvshowsmovies.html">TV Shows and Movies</a></li>
+                        <li><a href="socialmedia.html">Social Media</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main>
         <div class="leaves-bg">

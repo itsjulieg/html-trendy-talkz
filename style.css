@@ -3,26 +3,29 @@
 
 /* variables */
 :root {
-    --dark-brown:#6E4421;
-    --orange:#F08C00;
-    --beige:#EFC281;
-    --yellow:#FFE7C5;
-    --white:#FFFFFF;
-    --sky-blue:#09ADFF;
+    --dark-brown: #6E4421;
+    --orange: #F08C00;
+    --beige: #EFC281;
+    --yellow: #FFE7C5;
+    --white: #FFFFFF;
+    --sky-blue: #09ADFF;
     --font-sans: "DM Serif Text", "Times New Roman", serif;
 }
 
 /* global styles / reset */
-*, *::before, *::after {
-        box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -37,15 +40,16 @@ nav {
     width: 100%;
     height: 10%;
     background: #572800;
-    color:#FFFFFF;
+    color: #FFFFFF;
 }
 
 nav a {
-    color:#FFFFFF;
+    color: #FFFFFF;
     transition: 0.2s color ease;
 }
 
-nav a:hover, nav a:focus {
+nav a:hover,
+nav a:focus {
     text-decoration: none;
     color: var(--sky-blue);
 }
@@ -55,18 +59,25 @@ img {
 }
 
 /* typography */
-h1 {
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--white);
+h1,
+h2,
+h3 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-h2, h3 {
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  font-style: normal;
-  align-items: center;
+h1 {
+    font-size: 36px;
+    line-height: normal;
+    color: var(--white);
+    text-align: center;
+    height: 88px;
+}
+
+h2,
+h3 {
+    align-items: center;
 }
 
 p {
@@ -74,18 +85,6 @@ p {
     line-height: 25px;
     width: 100%;
     max-width: 634px;
-}
-
-h1 {
-    font-size: 36px;
-    font-family: "DM Serif Display";
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: var(--white);
-    text-align: center;
-    padding: auto;
-    height: 88px
 }
 
 ul {
@@ -102,7 +101,7 @@ header img {
 }
 
 /* homepage */
-.sr-only{
+.sr-only {
     visibility: hidden;
 }
 
@@ -114,77 +113,82 @@ header img {
     background-position: center;
     color: #FFFFFF;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.home #scroll-up{
+.home #scroll-up {
     display: none;
+}
+
+.box-left,
+.box-right,
+.extra-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 37px 86px;
+    align-items: center;
+    gap: 27px;
+    flex-shrink: 0;
 }
 
 .box-left {
     color: var(--white);
-    display: flex;
-    width: 100%;
-    padding: 37px 86px;
-    flex-direction: column;
-    align-items: center;
-    gap: 27px;
-    flex-shrink: 0;
     background: #7D5029;
-}
-
-.box-left-content {
-    color:#FFFFFF;
-    display: flex;
-    width: 1265px;
-    justify-content: center;
-    align-items: center;
-    gap: 61px;
 }
 
 .box-right {
     color: var(--dark-brown);
+    background: var(--yellow);
+}
+
+.extra-box {
+    background: #EFC281;
+    color: #6E4421;
+}
+
+.box-left-content,
+.box-right-content {
     display: flex;
-    width: 100%;
-    padding: 37px 86px;
+    max-width: 1265px;
+    justify-content: center;
+    gap: 61px;
+}
+
+.box-left-content {
+    color: #FFFFFF;
     flex-direction: column;
     align-items: center;
-    gap: 27px;
-    flex-shrink: 0;
-    background: var(--yellow);
 }
 
 .box-right-content {
     color: var(--dark-brown);
-    display: flex;
-    flex-direction: row;
-    max-width: 1265px;
-    justify-content: center;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 61px;
     flex-wrap: nowrap;
 }
 
-.box-right-content-sources ul {
-  flex: 1 1 48%;        /* take up roughly half, but can shrink */
-  min-width: 0;        /* REQUIRED in flex layouts so child can shrink */
-  max-width: 520px;    /* adjust to taste */
-  margin: 0;
-  padding-left: 1.2rem;
-  overflow-wrap: anywhere;   /* allow long URLs to break/wrap */
-  word-break: break-word;    /* fallback for some browsers */
-}
-
 .box-right-content-sources {
-    color: var(--dark-brown);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    color: var(--dark-brown);
     max-width: 1265px;
     justify-content: center;
     align-items: flex-start;
     gap: 100px;
     flex-wrap: nowrap;
+}
+
+.box-right-content-sources ul {
+    flex: 1 1 48%;
+    min-width: 0;
+    max-width: 520px;
+    margin: 0;
+    padding-left: 1.2rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .box-right-content img {
@@ -193,54 +197,48 @@ header img {
     display: block;
 }
 
-.box-left-content h2, .box-right-content h2 {
+.box-left-content h2,
+.box-right-content h2 {
     text-align: center;
 }
 
-.extra-box {
-    background:#EFC281;
-    color:#6E4421;
+.fall-fashion-intro,
+.fall-fashion-conclusion {
     display: flex;
+    flex-direction: column;
+    color: var(--white);
     width: 100%;
+    height: 100%;
     padding: 37px 86px;
-    gap: 27px;
-    flex-shrink: 0;
+    background-size: cover;
 }
 
 .fall-fashion-intro {
     background: linear-gradient(270deg, rgba(193, 22, 23, 0.00) 48.77%, rgba(193, 22, 23, 0.80) 68.18%), url(images/knitted-fall-set.jpg);
-    color: var(--white);
-    width: 100%;
-    height: 100%; 
-    padding: 37px 86px;
-    background-size: cover;
-    display: flex;
     background-position: 90% 40%;
 }
 
 .fall-fashion-conclusion {
     background: linear-gradient(90deg, rgba(125, 80, 41, 0.80) 26.41%, rgba(125, 80, 41, 0.00) 71.89%), url(images/pexels-karola-g-5706277.jpg);
-    color: var(--white);
-    width: 100%;
-    height: 100%; 
+    background-position: 0% 50%;
+}
+
+.tv-show-box,
+.songs-box {
+    display: flex;
+    flex-direction: column;
+    color: white;
     padding: 37px 86px;
     background-size: cover;
-    display: flex;
-    background-position: 0% 50%;
 }
 
 .tv-show-box {
     background: linear-gradient(90deg, rgba(22, 40, 44, 0.80) 38.07%, rgba(0, 0, 0, 0.00) 69.16%), url(images/tv-show-box_background.jpg);
-    color: white;
-    padding: 37px 86px;
-    background-size: cover;
     background-position: 121.111% 0%;
 }
 
 .songs-box {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.72) 34.84%, rgba(0, 0, 0, 0.00) 75.33%), url(images/ghost_trend-socialmedia_pexels.jpg);
-    color: white;
-    padding: 37px 86px;
     background-position: 0% 48.48%;
     background-size: 135%;
 }
@@ -260,25 +258,30 @@ footer {
 }
 
 /* media queries */
-@media (min-width: 700px) {
+@media (min-width: 1280px) {
 
-h1 {
-text-align: center;
-/* heading 1 desktop */
-font-family: "DM Serif Display";
-font-size: 64px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-color:#FFF
-}
+    h1 {
+        text-align: center;
+        /* heading 1 desktop */
+        font-family: "DM Serif Display";
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #FFF
+    }
 
-h2 {
-font-family: "DM Serif Display";
-font-size: 48px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
+    h2 {
+        font-family: "DM Serif Display";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .box-left-content,
+    .box-right-content, .box-right-content, .box-right-content-sources, .leaves-bg, .box-left-content, .extra-box, .fall-fashion-intro   {
+        flex-direction: row;
+    }
 
 }
