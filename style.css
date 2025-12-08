@@ -184,9 +184,9 @@ header img {
 .box-right-content-sources ul {
     flex: 1 1 48%;
     min-width: 0;
-    max-width: 520px;
+    max-width: 620px;
     margin: 0;
-    padding-left: 1.2rem;
+    padding-left: 1rem;
     overflow-wrap: anywhere;
     word-break: break-word;
 }
@@ -195,6 +195,61 @@ header img {
     flex: 0 0 auto;
     height: auto;
     display: block;
+}
+
+/* Responsive YouTube embed wrapper */
+.video-embed {
+    position: relative;
+    width: 100%;
+    max-width: 1265px; /* match content column */
+    margin: 0 auto;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    z-index: 2; /* ensure iframe sits above other elements */
+    pointer-events: auto;
+}
+
+/* Thumbnail fallback for blocked embeds */
+.video-fallback {
+    max-width: 1265px;
+    margin: 1.5rem auto;
+    position: relative;
+}
+.video-fallback a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+.video-fallback img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+.video-fallback .play-overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 56px;
+    color: rgba(255,255,255,0.95);
+    text-shadow: 0 4px 14px rgba(0,0,0,0.6);
+    pointer-events: none;
+}
+.video-fallback a:focus .play-overlay,
+.video-fallback a:hover .play-overlay {
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
 .box-left-content h2,
