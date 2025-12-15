@@ -336,3 +336,15 @@ footer {
     }
 
 }
+
+/* Mobile fixes for text overflow */
+@media (max-width: 768px) {
+    .box-right-content-sources ul {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%; /* Prevent overflow */
+        padding-left: 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto; /* Optional: allow hyphenation for better wrapping */
+    }
+}
